@@ -88,6 +88,8 @@ image_translation
 ptcg-server/.nyc_output
 ptcg-server/node_modules
 ptcg-play/node_modules
+imaginarium-server/node_modules
+imaginarium-server/dist
 ptcg-server/dist/avatars
 ptcg-server/avatars
 ptcg-server/.nyc_output/processinfo/index.json
