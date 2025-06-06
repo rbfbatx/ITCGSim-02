@@ -138,4 +138,4 @@ export * from './set-test';
 export * from './set-legends-awakened';
 export * from './set-stormfront';
 export * from './set-majestic-dawn';
-export * from './set-arceus';
+export * from './set-arceus';export * from './set-imaginarium';

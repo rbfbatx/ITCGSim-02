@@ -58,6 +58,11 @@ export class DeckEditToolbarComponent implements OnDestroy {
     { value: CardType.FIRE, label: 'LABEL_FIRE' },
     { value: CardType.DRAGON, label: 'LABEL_DRAGON' },
     { value: CardType.FAIRY, label: 'LABEL_FAIRY' },
+    { value: CardType.RUBY, label: 'Ruby' },
+    { value: CardType.SAPPHIRE, label: 'Sapphire' },
+    { value: CardType.EMERALD, label: 'Emerald' },
+    { value: CardType.DIAMOND, label: 'Diamond' },
+    { value: CardType.ONYX, label: 'Onyx' },
   ];
 
   public superTypes = [
@@ -90,7 +95,8 @@ export class DeckEditToolbarComponent implements OnDestroy {
     { value: TrainerType.ITEM, label: 'CARDS_ITEM' },
     { value: TrainerType.STADIUM, label: 'CARDS_STADIUM' },
     { value: TrainerType.SUPPORTER, label: 'CARDS_SUPPORTER' },
-    { value: TrainerType.TOOL, label: 'CARDS_POKEMON_TOOL' }
+    { value: TrainerType.TOOL, label: 'CARDS_POKEMON_TOOL' },
+    { value: TrainerType.IMPLEMENT, label: 'Implement' }
   ];
 
   public cardTags = [

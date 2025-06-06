@@ -99,6 +99,9 @@
         <!-- <ptcg-coin-flip [prompt]="activeCoinFlipPrompt">
         </ptcg-coin-flip> -->
       </div>
+      <div class="dice-result" *ngIf="lastDiceResult">
+        <span>Dice: {{ lastDiceResult.rolls.join(', ') }} =&nbsp;{{ lastDiceResult.total }}</span>
+      </div>
       <div class="marker-container bottom-markers">
         <div class="vstar-marker" [class.used]="bottomPlayer?.usedVSTAR"></div>
         <div class="gx-marker" [class.used]="bottomPlayer?.usedGX"></div>
