@@ -53,7 +53,9 @@ This repository consists of a Node.js server in `ptcg-server` and an Angular fro
 # backend server
 cd ptcg-server
 npm install
+
 npm run start:dev   # or npm start for prod
+
 
 # frontend application
 cd ../ptcg-play
