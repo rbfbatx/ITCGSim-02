@@ -161,6 +161,12 @@ export enum CardType {
   LPM,
   FDY,
   GRPD
+  ,
+  RUBY,
+  SAPPHIRE,
+  EMERALD,
+  DIAMOND,
+  ONYX
 }
 
 export enum SpecialCondition {
@@ -169,6 +175,8 @@ export enum SpecialCondition {
   ASLEEP,
   POISONED,
   BURNED,
+  WOUNDED,
+  DISABLED,
   ABILITY_USED,
   POWER_GLOW
 }
