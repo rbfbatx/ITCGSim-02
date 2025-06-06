@@ -38,10 +38,10 @@ imaginarium-tcg/
 ├── package.json
 └── tailwind.config.js
 
-Always show details
-
 
 ## 🛠️ Getting Started
+
+This repository consists of a Node.js server in `ptcg-server` and an Angular frontend in `ptcg-play`.
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -50,10 +50,18 @@ Always show details
 ### Installation
 
 ```bash
+# backend server
+cd ptcg-server
 npm install
-npm run dev # starts ptcg-server and ptcg-play together
 
-Then open http://localhost:5173 in your browser.
+npm run start:dev   # or npm start for prod
+
+
+# frontend application
+cd ../ptcg-play
+npm install
+npm start           # serves on http://localhost:4200
+```
 🧪 Gameplay Overview
 
 Each player:
