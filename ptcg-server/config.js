@@ -9,4 +9,5 @@ config.backend.avatarsDir = __dirname + '/avatars';
 
 config.bots.defaultPassword = 'bot';
 
-config.sets.scansDir = __dirname + '/scans';
+config.sets.scansDir = __dirname + '/src/assets/images';
+config.sets.scansUrl = 'http://localhost:8080{cardImage}';

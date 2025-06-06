@@ -60,6 +60,7 @@ export class App {
 
     if (config.sets.scansDir) {
       app.use('/scans', express.static(config.sets.scansDir));
+      app.use('/assets/images', express.static(config.sets.scansDir));
     }
     app.use('/avatars', express.static(config.backend.avatarsDir));
 
