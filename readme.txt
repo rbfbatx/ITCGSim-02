@@ -43,6 +43,35 @@ Always show details
 
 ## 🛠️ Getting Started
 
+Server launch
+
+Server is a simple node.js application written in TypeScript. It uses express with websockets and typeorm for database access.
+
+Prerequisites:
+
+    Node.js 8 LTS or higher
+    mysql-5 or sqlite-3
+
+config.js contains all available options and its default values are defined in the src/config.ts
+
+    Install all required dependencies.
+
+npm install
+
+    Add a file named ".env" in the main ptcg-server directory. Paste these contents.
+
+STORAGE_TYPE='sqlite'
+STORAGE_DATABASE='database.sq3'
+SERVER_PASSWORD=''
+SERVER_SECRET='!secret!'
+
+    Build the project and start it.
+
+npm run build
+npm start
+
+The service should now listen on the specified address and port. It will be http://localhost:8080 by default. This can be changed by editing config.js as previously mentioned. This server uses Sqlite-3.
+
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm
