@@ -59,6 +59,7 @@ export enum TrainerType {
   SUPPORTER,
   STADIUM,
   TOOL,
+  IMPLEMENT,
 }
 
 export enum PokemonType {
@@ -170,7 +171,9 @@ export enum SpecialCondition {
   POISONED,
   BURNED,
   ABILITY_USED,
-  POWER_GLOW
+  POWER_GLOW,
+  WOUNDED,
+  DISABLED
 }
 
 export enum BoardEffect {

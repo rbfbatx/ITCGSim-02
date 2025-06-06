@@ -109,6 +109,9 @@ export function playCardReducer(store: StoreLike, state: State, action: Action):
             }
             effect = new AttachPokemonToolEffect(player, handCard, target);
             break;
+          case TrainerType.IMPLEMENT:
+            effect = new PlayItemEffect(player, handCard, target);
+            break;
           default:
             effect = new PlayItemEffect(player, handCard, target);
             break;

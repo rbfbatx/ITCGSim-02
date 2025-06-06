@@ -158,6 +158,7 @@ export class CardList {
     if (input === TrainerType.ITEM) return 2;
     if (input === TrainerType.TOOL) return 3;
     if (input === TrainerType.STADIUM) return 4;
+    if (input === TrainerType.IMPLEMENT) return 5;
     return Infinity;
   }
   
