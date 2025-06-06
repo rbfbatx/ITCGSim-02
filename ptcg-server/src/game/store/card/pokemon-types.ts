@@ -32,7 +32,10 @@ export enum PowerType {
   POKEPOWER,
   ABILITY,
   ANCIENT_TRAIT,
-  POKEMON_POWER
+  POKEMON_POWER,
+  PASSIVE,
+  CONDITIONAL,
+  TRIGGERED
 }
 
 export interface Power {
