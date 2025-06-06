@@ -51,7 +51,7 @@ Always show details
 
 ```bash
 npm install
-npm run dev
+npm run dev # starts ptcg-server and ptcg-play together
 
 Then open http://localhost:5173 in your browser.
 🧪 Gameplay Overview
