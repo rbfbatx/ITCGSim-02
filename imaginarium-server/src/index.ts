@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express';
 import http from 'http';
 import cors from 'cors';
 import { Server } from 'socket.io';
+import { cards } from './game/cards';
+import { rollDice } from './game/dice';
 
 interface SocketResponse<T> {
   message: string;
@@ -35,6 +37,20 @@ app.get('/v1/login/refreshToken', (_req: Request, res: Response) => {
 
 app.post('/v1/login/register', (_req: Request, res: Response) => {
   res.json({ message: 'ok', token: 'dev-token', config: { apiVersion: API_VERSION } });
+});
+
+app.get('/v1/cards', (_req: Request, res: Response) => {
+  res.json({ message: 'ok', cards });
+});
+
+app.post('/v1/game/roll', (req: Request, res: Response) => {
+  const { expression } = req.body;
+  try {
+    const result = rollDice(expression);
+    res.json({ message: 'ok', result });
+  } catch (e: any) {
+    res.json({ message: 'error', data: e.message });
+  }
 });
 
 // Simple in-memory deck store
