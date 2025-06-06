@@ -45,6 +45,7 @@ export class State {
   public skipOpponentTurn = false;
 
   public lastAttack: Attack | null = null;
+  public lastDiceResult: import('../../utils/dice').DiceResult | null = null;
 
   public playerLastAttack: { [playerId: number]: Attack } = {};
 

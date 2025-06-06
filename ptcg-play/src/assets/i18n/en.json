@@ -135,6 +135,8 @@
   "LABEL_COLORLESS": "Colorless",
   "LABEL_CONFUSED": "Confused",
   "LABEL_ABILITY_USED": "Ability Used",
+  "LABEL_WOUNDED": "Wounded",
+  "LABEL_DISABLED": "Disabled",
   "LABEL_EMAIL": "E-mail",
   "LABEL_DARK": "Dark",
   "LABEL_DATE": "Date",
