@@ -65,6 +65,7 @@ Each player:
     Attaches Gemstones to meet attack costs
 
     Rolls dice to determine damage output
+    Applies type effectiveness and status conditions
 
     Knocks out enemy Characters by reducing LP to 0
 
