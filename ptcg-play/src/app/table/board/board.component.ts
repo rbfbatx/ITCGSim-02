@@ -130,6 +130,10 @@ export class BoardComponent implements OnDestroy {
   private lastCoinFlipPrompt: CoinFlipPrompt | null = null;
   private lastProcessedId: number = -1;
 
+  get lastDiceResult() {
+    return this.gameState?.state?.lastDiceResult || null;
+  }
+
   get activeCoinFlipPrompt(): CoinFlipPrompt | undefined {
     // Find current coin flip prompt
     const currentPrompt = this.gameState?.state?.prompts?.find(prompt => {

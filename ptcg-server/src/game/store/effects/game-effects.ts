@@ -7,6 +7,7 @@ import { Card } from '../card/card';
 import { CardTarget } from '../actions/play-card-action';
 import { TrainerCard } from '../card/trainer-card';
 import { CardList } from '../state/card-list';
+import { rollDice, DiceResult } from '../../utils/dice';
 
 export enum GameEffects {
   RETREAT_EFFECT = 'RETREAT_EFFECT',
@@ -140,6 +141,7 @@ export class AttackEffect implements Effect {
   public opponent: Player;
   public attack: Attack;
   public damage: number;
+  public diceResult?: DiceResult;
   public ignoreWeakness = false;
   public ignoreResistance = false;
   public source: PokemonCardList;
@@ -149,7 +151,12 @@ export class AttackEffect implements Effect {
     this.player = player;
     this.opponent = opponent;
     this.attack = attack;
-    this.damage = attack.damage;
+    if (attack.damageCalculation) {
+      this.diceResult = rollDice(attack.damageCalculation);
+      this.damage = this.diceResult.total;
+    } else {
+      this.damage = attack.damage;
+    }
     this.source = player.active;
   }
 }

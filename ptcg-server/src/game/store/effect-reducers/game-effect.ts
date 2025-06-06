@@ -133,6 +133,7 @@ function* useAttack(next: Function, store: StoreLike, state: State, effect: UseA
   state.phase = GamePhase.ATTACK;
   const attackEffect = new AttackEffect(player, opponent, attack);
   state = store.reduceEffect(state, attackEffect);
+  state.lastDiceResult = attackEffect.diceResult || null;
 
   if (store.hasPrompts()) {
     yield store.waitPrompt(state, () => next());
@@ -187,6 +188,7 @@ function* useAttack(next: Function, store: StoreLike, state: State, effect: UseA
             if (selectedAttack) {
               const secondAttackEffect = new AttackEffect(player, opponent, selectedAttack);
               state = useAttack(() => next(), store, state, secondAttackEffect).next().value;
+              state.lastDiceResult = secondAttackEffect.diceResult || null;
 
               if (store.hasPrompts()) {
                 state = store.waitPrompt(state, () => next());

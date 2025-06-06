@@ -59,6 +59,7 @@ export enum TrainerType {
   SUPPORTER,
   STADIUM,
   TOOL,
+  IMPLEMENT,
 }
 
 export enum PokemonType {
@@ -161,6 +162,12 @@ export enum CardType {
   LPM,
   FDY,
   GRPD
+  ,
+  RUBY,
+  SAPPHIRE,
+  EMERALD,
+  DIAMOND,
+  ONYX
 }
 
 export enum SpecialCondition {
@@ -169,8 +176,12 @@ export enum SpecialCondition {
   ASLEEP,
   POISONED,
   BURNED,
+  WOUNDED,
+  DISABLED,
   ABILITY_USED,
-  POWER_GLOW
+  POWER_GLOW,
+  WOUNDED,
+  DISABLED
 }
 
 export enum BoardEffect {

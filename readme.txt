@@ -38,8 +38,6 @@ imaginarium-tcg/
 ├── package.json
 └── tailwind.config.js
 
-Always show details
-
 
 ## 🛠️ Getting Started
 
@@ -79,10 +77,18 @@ The service should now listen on the specified address and port. It will be http
 ### Installation
 
 ```bash
+# backend server
+cd ptcg-server
 npm install
-npm run dev
 
-Then open http://localhost:5173 in your browser.
+npm run start:dev   # or npm start for prod
+
+
+# frontend application
+cd ../ptcg-play
+npm install
+npm start           # serves on http://localhost:4200
+```
 🧪 Gameplay Overview
 
 Each player:
@@ -94,6 +100,7 @@ Each player:
     Attaches Gemstones to meet attack costs
 
     Rolls dice to determine damage output
+    Applies type effectiveness and status conditions
 
     Knocks out enemy Characters by reducing LP to 0
 
