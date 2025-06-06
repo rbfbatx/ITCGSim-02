@@ -141,6 +141,7 @@ cardManager.defineSet(sets.setSV9a);
 cardManager.defineSet(sets.setSV10);
 
 cardManager.defineSet(sets.setTest);
+cardManager.defineSet(sets.setImaginarium);
 
 cardManager.defineSet(sets.setLegendsAwakened);
 cardManager.defineSet(sets.setStormfront);
