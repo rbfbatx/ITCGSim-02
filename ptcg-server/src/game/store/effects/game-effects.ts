@@ -7,6 +7,7 @@ import { Card } from '../card/card';
 import { CardTarget } from '../actions/play-card-action';
 import { TrainerCard } from '../card/trainer-card';
 import { CardList } from '../state/card-list';
+import { rollDice } from '../../../utils/dice';
 
 export enum GameEffects {
   RETREAT_EFFECT = 'RETREAT_EFFECT',
@@ -150,6 +151,12 @@ export class AttackEffect implements Effect {
     this.opponent = opponent;
     this.attack = attack;
     this.damage = attack.damage;
+    if (attack.damageCalculation) {
+      try {
+        const { total } = rollDice(attack.damageCalculation);
+        this.damage = total;
+      } catch (_e) {}
+    }
     this.source = player.active;
   }
 }
