@@ -179,9 +179,7 @@ export enum SpecialCondition {
   WOUNDED,
   DISABLED,
   ABILITY_USED,
-  POWER_GLOW,
-  WOUNDED,
-  DISABLED
+  POWER_GLOW
 }
 
 export enum BoardEffect {

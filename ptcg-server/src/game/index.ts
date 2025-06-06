@@ -20,6 +20,7 @@ export * from './store/actions/play-card-action';
 export * from './store/actions/reorder-actions';
 export * from './imaginarium';
 export * from './store/actions/resolve-prompt-action';
+export * from './store/effects/effect';
 
 export * from './store/card/card-types';
 export * from './store/card/card';

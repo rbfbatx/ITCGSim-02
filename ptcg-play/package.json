@@ -6,9 +6,9 @@
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration=development --watch=false",
-    "start:local": "ng serve --configuration=local --watch=false",
-    "start:eric": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider ng serve --configuration=development --watch=false",
+    "start:local": "NODE_OPTIONS=--openssl-legacy-provider ng serve --configuration=local --watch=false",
+    "start:eric": "NODE_OPTIONS=--openssl-legacy-provider ng serve",
     "build": "ng build",
     "build:development": "ng build --configuration=development",
     "build:local": "ng build --configuration=local",
