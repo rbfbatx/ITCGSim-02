@@ -53,7 +53,7 @@ export class LoginService {
     return combineLatest([
       this.profileService.getMe(),
       this.messageService.getConversations(),
-      this.cardsService.getAll(),
+      this.cardsService.getCards(),
       this.waitForSocketConnection(response.token)
     ]).pipe(
       takeUntil(loginAborted$),
@@ -78,7 +78,7 @@ export class LoginService {
         );
 
         // Fetch cards data
-        this.cardsBaseService.setCards(cards.cards);
+        this.cardsBaseService.setCards(cards.cards as any);
 
         // Store data in the session
         this.sessionService.set({
